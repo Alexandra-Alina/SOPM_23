@@ -1,0 +1,28 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('../images/contactbackground.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#background {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid white;
+}
+#contact {
+    color:white;
+    text-align: center;
+    font-size:24px;
+}
+h1
+{
+    font-family: "Playfair Display";
+    letter-spacing: 5px;
+}
+.address{
+    font-weight: bold;
+}
+
