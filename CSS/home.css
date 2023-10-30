@@ -1,5 +1,7 @@
 body, html {
     height: 100%;
+    overflow: hidden;
+    font-family: "Times New Roman", serif;
 }
 
 * {
@@ -9,6 +11,9 @@ body, html {
 .topnav {
     background-color: #333;
     overflow: hidden;
+    position: fixed;
+    top:0;
+    left:0;
 }
 
 .topnav a {
@@ -50,11 +55,54 @@ body, html {
     font-weight: bold;
     border: 3px solid #f1f1f1;
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
     width: 80%;
     padding: 20px;
+    font-size: 34px;
     text-align: center;
+}
+.infotext {
+    margin-top: 25%;
+}
+
+.container {
+    display: flex; /* Setează afișarea elementelor copii orizontal (unul lângă altul) */
+    justify-content: center; /* Aliniază elementele copii în centru pe axa orizontală */
+    align-items: flex-start; /* Aliniază elementele copii în partea de sus a containerului */
+}
+
+.forppl,
+.forcompanies {
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.4);
+    color: white;
+    flex: 1; /* Distribuie spațiul disponibil pe orizontală între cele două coloane */
+    padding: 20px; /* Spațiere între conținut și marginile coloanelor */
+}
+
+.divider {
+    width: 2px; /* Lățimea despartitorului */
+    background-color: #333; /* Culoarea despartitorului */
+    margin: 0 20px; /* Spațiere între despartitor și coloane */
+}
+#maintext{
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.4);
+    font-size: 40px;
+    width: 300px;
+    margin-left: 40%;
+    color: white;
+    text-align: center;
+}
+.listheader{
+    font-size: 30px;
+    color: bisque;
+    font-weight: bold;
+}
+.list{
+    list-style-type: none;
+    font-size: 20px;
 }
