@@ -1,120 +1,134 @@
-
 .topnav {
-    overflow: hidden;
-    background-color: #333; /* Background color for the navigation bar */
-    width: 100%;
-    box-sizing: content-box;
-    
-  }
+  overflow: hidden;
+  background-color: #333;
   
-  .topnav a {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  .topnav a:hover {
-    background-color: #ddd; /* Color when hovering over links */
-    color: black;
-  }
-  
-  .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    width: 250px;
-    margin: 10px;
-    text-align: center;
-    font-family: arial;
-  }
-  
-  .price {
-    color: grey;
-    font-size: 22px;
-  }
-  
-  .card button {
-    border: none;
-    outline: 0;
-    padding: 12px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    font-size: 18px;
-  }
+  /* Background color for the navigation bar */
 
-  .info {
-    font-family: monospace;
-    position: absolute;
-    line-height: 20px;
-    font-size: 14px;
-    left: 20px;
-    top: 20px;
-  }
-
-
-  body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-  }
-
-  h2 {
-      font-size: 24px;
-  }
-
-
-  .section {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-  }
-  .card img {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-  }
-
-  .card button:hover {
-      opacity: 0.7;
-  }
-
-  body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-  }
-
-  h2 {
-      font-size: 24px;
-  }
-
-
-  .section {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-  }
-
-  .card img {
-      width: 100%;
-      height: 150px; /* Set the desired height for all images */
-      object-fit: cover;
 }
 
-  .price {
-      color: grey;
-      font-size: 22px;
-  }
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
 
-  .card:hover {
-    transform: scale(1.05); /* Scale the card when hovering */
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); /* Increase the box shadow on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 250px;
+  margin: 10px;
+  text-align: center;
+  font-family: arial;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.info {
+  font-family: monospace;
+  position: absolute;
+  line-height: 20px;
+  font-size: 14px;
+  left: 20px;
+  top: 20px;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+h2 {
+  font-size: 24px;
+  padding: 20px 200px;
+}
+
+
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  /* Set the desired height for all images */
+  object-fit: cover;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  /* Scale the card when hovering */
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  /* Increase the box shadow on hover */
+}
+
+.info {
+
+  position: absolute;
+  line-height: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px 200px;
 }
