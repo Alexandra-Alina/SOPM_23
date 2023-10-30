@@ -13,10 +13,10 @@
 <body>
     <img src="../images/contactbackground.jpg">
     <div class="topnav">
-        <a class="active" href="#contact">Contact</a>
+        <a class="active" href="home.html">Home</a>
         <a href="about.html">About</a>
         <a href="products.html">Products</a>
-        <a href="home.html">Home</a>
+        <a href="contact.html">Contact</a>
     </div>
 
     <div class="big-container">
@@ -30,7 +30,7 @@
                 </ul>
             </div>
             <div>
-                <form>
+                <form id="contact-form" onsubmit="displayFormData()">
                     <div class="row">
                         <div class="col-25">
                             <label for="fname">First Name</label>
@@ -49,11 +49,11 @@
                     </div>
                     <div class="row">
                         <div class="col-25">
-                            <label for="subject">Subject</label>
+                            <label for="subject">Order</label>
                         </div>
                         <div class="col-75">
                             <textarea id="subject" name="subject" placeholder=" Your order.."
-                                style="height:100px"></textarea>
+                                style="height:100px" maxlength="80"></textarea>
                         </div>
                     </div>
                     <br>
@@ -64,11 +64,32 @@
             </div>
         </div>
 
+        <script>
+            document.getElementById("contact-form").addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                // Get the form input values
+                const firstName = document.getElementById('fname').value;
+                const lastName = document.getElementById('lname').value;
+                const subject = document.getElementById('subject').value;
+
+                // Construct the message with the submitted data
+                const message = `First Name: ${firstName}<br>Last Name: ${lastName}<br>Subject: ${subject}`;
+
+                // Save the message to localStorage for the confirmation page to retrieve
+                localStorage.setItem("submittedMessage", message);
+
+                // Redirect to the confirmation page
+                window.location.href = 'confirmation.html';
+            });
+        </script>
+
         <div class="map-container">
             <iframe src="http://maps.google.com/maps?q=45.645733, 25.602697&z=15&output=embed" width="700" height="390"
                 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
+
 
 </body>
 

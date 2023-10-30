@@ -137,16 +137,31 @@ input[type=submit]:hover {
   
   }
   
-  .topnav a {
+  .topnav {
+    background-color: #4CAF50;
+    overflow: hidden;
+}
+
+.topnav a {
     float: left;
-    display: block;
     color: white;
     text-align: center;
-    padding: 14px 20px;
+    padding: 14px 16px;
     text-decoration: none;
-  }
-  
-  .topnav a:hover {
-    background-color: #ddd;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #98d199;
     color: black;
-  }
+}
+
+.topnav a.active {
+    background-color: #4CAF50;;
+    color: white;
+}
+
+.topnav a.active:hover{
+  background-color: #98d199;
+  color: black;
+}
