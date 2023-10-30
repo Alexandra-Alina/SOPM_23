@@ -1,26 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Contact</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/contact.css">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet">
+
 <body>
-<div id="background">
-<div id="contact">
-    <h1>Contact</h1>
-
-    <div class="info">
-        <p class="address">Fruits and vegetables store,Strada Memorandumului nr. 18, 500045 Brasov, BV</p>
-        <p class="phoneemail"> Phone number 07namcartela or email: fruitsplusvegetables@gmail.com :</p>
+    <img src="../images/contactbackground.jpg">
+    <div class="topnav">
+        <a class="active" href="#contact.html">Contact</a>
+        <a href="#about.html">About</a>
+        <a href="#products.html">Products</a>
+        <a href="#home.html">Home</a>
     </div>
 
-        <div class="nametype"><input  type="text" placeholder="Name" required name="Name"></div>
-        <div class="itemtype"><input type="text" placeholder="Items desired" required name="Message"></div>
-            <button type="submit">SEND MESSAGE</button>
+    <div class="big-container">
+        <div class="text-container">
+            <div class="info">
+                <h1 class="font-roboto">Contact</h1>
+                <ul>
+                    <li>Fruits and vegetables store, Strada Memorandumului nr. 18, 500045 Brasov, BV</li>
+                    <li>Phone number 07namcartela or email: fruitsplusvegetables@gmail.com</li>
+                </ul>
+            </div>
+            <div>
+                <form>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="fname">First Name</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="lname">Last Name</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="subject">Subject</label>
+                        </div>
+                        <div class="col-75">
+                            <textarea id="subject" name="subject" placeholder=" Your order.."
+                                style="height:100px"></textarea>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="map-container">
+            <iframe src="http://maps.google.com/maps?q=45.645733, 25.602697&z=15&output=embed" width="700" height="390"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
     </div>
-</div>
 
 </body>
+
 </html>
