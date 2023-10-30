@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Function to animate the emojis falling
     function animateEmoji(emoji) {
         const startPosition = Math.random() * window.innerWidth;
-        const duration = Math.random() * 20 + 30; // Random duration between 1 and 3 seconds
+        const duration = Math.random() * 23 + 15; // Random duration between 1 and 3 seconds
         emoji.style.left = `${startPosition}px`;
         emoji.style.animation = `fall ${duration}s linear`;
 
@@ -28,12 +28,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Create and animate multiple emojis
     setInterval(() => {
-        const numberOfEmojis = 1; // You can adjust this number to have more or fewer emojis in each interval
+        const numberOfEmojis = 0.1; // You can adjust this number to have more or fewer emojis in each interval
         for (let i = 0; i < numberOfEmojis; i++) {
             const emoji = createEmoji();
             animateEmoji(emoji);
         }
-    }, 100); // Add a new set of emojis every 0.1 seconds
+    }, 700); // Add a new set of emojis every 0.1 seconds
+
+        // Trigger the emoji animation immediately after the page is loaded
+        const initialEmojis = 50; // Number of emojis to show initially
+        for (let i = 0; i < initialEmojis; i++) {
+            const emoji = createEmoji();
+            animateEmoji(emoji);
+        }
 });
 
 
@@ -54,16 +61,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     const fadeInOptions = {
-        threshold: 0.5,
+        threshold: 0.18,
         rootMargin: "0px 0px -100px 0px"
     };
 
     const fadeInObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                entry.target.style.transition = "opacity 1s ease, transform 1s ease";
-                entry.target.style.opacity = 1;
-                entry.target.style.transform = "translateY(0)";
+                setTimeout(() => { // Add a delay of 1 second for the first content box
+                    entry.target.style.transition = "opacity 1s ease, transform 1s ease";
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = "translateY(0)";
+                }, 150); // 1000 milliseconds = 1 second
                 observer.unobserve(entry.target);
             }
         });
@@ -73,10 +82,3 @@ document.addEventListener("DOMContentLoaded", function () {
         fadeInObserver.observe(element);
     });
 });
-
-
-
-
-
-
-
