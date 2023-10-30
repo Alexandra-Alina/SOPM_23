@@ -90,6 +90,15 @@ body, html {
     color: #4CAF50;
   }
 
+.text h1.title1{
+  color: rgb(245, 103, 103);
+
+}
+
+.text h1.title2{
+    color: rgb(230, 167, 50);
+  }
+
   .image {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -103,11 +112,22 @@ body, html {
   /* Add this to your CSS file */
 .emoji {
   position: fixed;
-  font-size: 24px; /* You can adjust the size of the emojis */
+  font-size: 24px; /*  size of the emojis */
   pointer-events: none;
   user-select: none;
   animation: fall 2s linear;
 }
+
+.emoji-rain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* Allows interaction with elements behind the container */
+  z-index: -1; /* Position it behind other elements */
+}
+
 
 @keyframes fall {
   0% {
