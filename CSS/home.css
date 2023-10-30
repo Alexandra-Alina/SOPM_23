@@ -1,6 +1,5 @@
 body, html {
     height: 100%;
-    overflow: hidden;
     font-family: "Times New Roman", serif;
 }
 
@@ -9,16 +8,13 @@ body, html {
 }
 
 .topnav {
-    background-color: #333;
+    background-color: #4CAF50;
     overflow: hidden;
-    position: fixed;
-    top:0;
-    left:0;
 }
 
 .topnav a {
     float: left;
-    color: #da1010;
+    color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -26,13 +22,18 @@ body, html {
 }
 
 .topnav a:hover {
-    background-color: #867070;
+    background-color: #98d199;
     color: black;
 }
 
 .topnav a.active {
-    background-color: #04AA6D;
+    background-color: #4CAF50;;
     color: white;
+}
+
+.topnav a.active:hover{
+    background-color: #98d199;
+    color: black;
 }
 
 .bgimg{
@@ -47,31 +48,101 @@ body, html {
     filter: blur(5px); /* Aici specifici cât de intens să fie efectul de blur (5px în acest caz). */
     z-index: -1;
 }
-
+.bgpanels{
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.bgtextandarrows {
+    margin: 0 auto;
+}
 .bgtext {
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.4);
+    position: relative;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.4);
     color: white;
     font-weight: bold;
+    margin-top: 10%;
     border: 3px solid #f1f1f1;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     z-index: 2;
-    width: 80%;
     padding: 20px;
     font-size: 34px;
     text-align: center;
+    flex: 1;
 }
+/* Next & previous buttons */
+.bgtext a.prev {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: auto;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+.bgtext a.next {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: auto;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px; /* Spațierea între puncte */
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.dots{
+    text-align: center;
+    margin-top: 1%;
+}
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
 .infotext {
-    margin-top: 25%;
+    width: 100%;
+    max-height: 25%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
 }
 
 .container {
-    display: flex; /* Setează afișarea elementelor copii orizontal (unul lângă altul) */
-    justify-content: center; /* Aliniază elementele copii în centru pe axa orizontală */
-    align-items: flex-start; /* Aliniază elementele copii în partea de sus a containerului */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .forppl,
@@ -79,23 +150,23 @@ body, html {
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0, 0.4);
     color: white;
-    flex: 1; /* Distribuie spațiul disponibil pe orizontală între cele două coloane */
-    padding: 20px; /* Spațiere între conținut și marginile coloanelor */
+    flex: 1;
+    padding: 20px;
 }
 
 .divider {
-    width: 2px; /* Lățimea despartitorului */
-    background-color: #333; /* Culoarea despartitorului */
-    margin: 0 20px; /* Spațiere între despartitor și coloane */
+    width: 2px;
+    background-color: #333;
+    margin: 0 20px;
 }
 #maintext{
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0, 0.4);
     font-size: 40px;
     width: 300px;
-    margin-left: 40%;
     color: white;
     text-align: center;
+    margin: 2% auto;
 }
 .listheader{
     font-size: 30px;
@@ -105,4 +176,124 @@ body, html {
 .list{
     list-style-type: none;
     font-size: 20px;
+}
+@media only screen and (max-width: 720px) {
+    .infotext {
+        position: absolute;
+    }
+}
+.carousel-controls {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+.faq-heading{
+    color: #ffffff;
+    border-bottom: #a41717;
+    top: 0;
+    margin-bottom: 5%;
+    text-align: center;
+    font-size: 30px;
+}
+.faq-container{
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.hr-line{
+    width: 60%;
+    margin: auto;
+
+}
+.faq-page {
+    color: #ffffff;
+    cursor: pointer;
+    padding: 30px 20px;
+    width: 60%;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    margin: auto;
+}
+.faq-body{
+    margin: auto;
+    width: 50%;
+    padding: auto;
+
+}
+
+.faq-body {
+    padding: 0 18px;
+    display: none;
+    color: white;
+    overflow: hidden;
+}
+.faq-page:after {
+    content: '+';
+    font-size: 20px;
+    color: #b71d1d;
+    float: right;
+    margin-left: 5px;
+}
+.faq-page.active::after {
+    content: '-';
+    color: #b71d1d;
+    font-size: 20px;
+    float: right;
+    margin-left: 5px;
+}
+
+#overlay {
+    margin: 0 auto;
+    position: fixed; /* Sit on top of the page content */
+    width: 75%; /* Full width (cover the whole page) */
+    display: none;
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.95); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+}
+#faqbutton {
+    position: absolute;
+    top : 0;
+    right: 0;
+    background: transparent;
+    padding-right: 1%;
+    padding-top: 0.2%;
+}
+#close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
+
+}
+#close:hover{
+    background: #a41717;
+}
+#fullscreen-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
 }

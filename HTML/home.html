@@ -4,25 +4,51 @@
     <meta charset="UTF-8">
     <title>VeggieVista</title>
     <link rel="stylesheet" href="../CSS/home.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../JS/home.js"></script>
+
 </head>
 <body>
 <div class="topnav">
-    <a class="active" href="#home">Home</a>
+    <a class="active" href="home.html">Home</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
-    <a href="produse.html">Products</a>
+    <a href="products.html">Products</a>
 </div>
-<div class = "bgtext">
-    <p> Welcome to VeggieVista</p>
-    <p> Order fresh fruits and/or vegetables for your family or your company</p>
+<div class="bgpanels">
+    <div class="bgtextandarrows">
+        <div class="bgtext" style="display: block">
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <p> Welcome to VeggieVista</p>
+            <p> Order fresh fruits and/or vegetables for your family or your company</p>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div class="bgtext">
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <p> Who are we?</p>
+            <p> Your best partner when it comes to eating healthy</p>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div class="bgtext">
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <p> Wanna join us?</p>
+            <p> Visit the contact page</p>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </div>
+    <div class="dots" style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
 </div>
+
+
+
 <div class = "bgimg">
 </div>
+<p id = "maintext"> What we offer </p>
 <div class = "infotext">
-    <table>
-    <p id = "maintext"> What we offer </p>
-    <tr>
-        <td>
         <div class = "forppl">
             <p class = listheader> For you</p>
         <ul class = "list">
@@ -32,7 +58,7 @@
             <li>🍊 <b>Rewards for Loyal Customers:</b> <br>Enjoy loyalty programs and exclusive discounts for our loyal customers.</li>
         </ul>
     </div>
-        </td>
+
     <td>
     <div class = "forcompanies">
         <p class = listheader> For Companies</p>
@@ -43,9 +69,56 @@
             <li>🍊 <b>Significant Cost Savings:</b><br> Benefit from preferential pricing and discounts for bulk orders.</li>
         </ul>
     </div>
-    </td>
-    </tr>
-    </table>
 </div>
+<div id = "faqbutton">
+    <input type="image" src="../images/faq2.png" width="60px" onclick="on()" />
+</div>
+
+<div id="fullscreen-container">
+    <div id="overlay">
+        <button id="close" onclick="off()">Close</button>
+        <section class="faq-container">
+            <h1 class="faq-heading"> FAQ Page </h1>
+            <div class="faq-one">
+                <!-- faq question -->
+                <h1 class="faq-page">What are the benefits of eating fruits and vegetables?</h1>
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>Eating fruits and vegetables provides essential vitamins, minerals, and fiber. They can help boost your immune system, support digestion, and contribute to overall health and well-being.</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+            <div class="faq-two">
+                <!-- faq question -->
+                <h1 class="faq-page">How can I choose the freshest fruits and vegetables?</h1>
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>To choose the freshest produce, look for vibrant colors, firm textures, and a pleasant aroma. You can also ask your local farmer or grocer for tips on selecting the best items.</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+            <div class="faq-three">
+                <!-- faq question -->
+                <h1 class="faq-page">What are some popular fruit and vegetable recipes?</h1>
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>There are countless delicious recipes to explore, from fresh fruit salads to roasted vegetable medleys. You can find a variety of recipes online or in cookbooks to suit your taste.</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+            <div class="faq-four">
+                <!-- faq question -->
+                <h1 class="faq-page">Are organic fruits and vegetables worth the price?</h1>
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>Organic produce is grown without synthetic pesticides or chemicals. While it may be more expensive, many people choose it for its reduced environmental impact and potential health benefits.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+
 </body>
 </html>
