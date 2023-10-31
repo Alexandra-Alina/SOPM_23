@@ -16,21 +16,17 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 let slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
 function plusSlides(n) {
     showSlides(slideIndex += n);
 }
-
 // Thumbnail image controls
 function currentSlide(n) {
     showSlides(slideIndex = n);
 }
-
 function showSlides(n) {
     let i;
     let slides = document.getElementsByClassName("bgtext");
+    console.log(slides.length);
     let dots = document.getElementsByClassName("dot");
     if (n > slides.length) {slideIndex = 1}
     if (n < 1) {slideIndex = slides.length}
@@ -61,5 +57,20 @@ $(function() {
     });
     $("#close").click(function() {
         $("#overlay").fadeOut(200);
+    });
+})
+
+document.addEventListener("DOMContentLoaded", function () {
+    window.addEventListener('load', function () {
+        const button = document.querySelector(".next");
+        if (button) {
+            console.log("Button found.");
+            setInterval(function () {
+                console.log("Clicking the button.");
+                button.click();
+            }, 3000);
+        } else {
+            console.log("Button not found.");
+        }
     });
 });
