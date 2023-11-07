@@ -307,4 +307,14 @@ button:hover {
     from {opacity: .4}
     to {opacity: 1}
 }
+.fadee {
+    animation-name: fade;
+    animation-duration: 0.5s;
+}
+
+@keyframes fadee {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
 
